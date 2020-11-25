@@ -1,0 +1,37 @@
+.present #nap {
+    width: 16em;
+    height: 16em;
+    margin-top: -15px;
+    position: absolute;
+    transition: transform 1s linear;
+    transform-origin: left;
+    transform-style: preserve-3D;
+}
+
+.present #hop {
+    width: 16em;
+    height: 16em;
+    position: absolute;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.present .present-rotate {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    /* -webkit-transform-origin: 10% 40%;
+    -moz-transform-origin: 10% 40%;
+    -o-transform-origin: 10% 40%;
+     transform-origin: 10% 40%;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+     transition-duration: 1s; */
+   }
