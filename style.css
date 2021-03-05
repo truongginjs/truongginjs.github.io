@@ -34,4 +34,21 @@
     -moz-transition-duration: 1s;
     -o-transition-duration: 1s;
      transition-duration: 1s; */
-   }
+}
+
+.animation-bo {
+    animation: mymove 5s infinite;
+}
+
+.show-bo {
+    visibility: hidden;
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 300px;
+    }
+}
