@@ -10,7 +10,7 @@
 
 .present #hop {
     width: 16em;
-    height: 16em;
+    /*height: 16em;*/
     position: absolute;
 }
 
@@ -36,19 +36,33 @@
      transition-duration: 1s; */
 }
 
-.animation-bo {
-    animation: mymove 5s infinite;
+/*.animation-bo {*/
+/*    animation: mymove 5s infinite;*/
+/*}*/
+
+/*.show-bo {*/
+/*    visibility: hidden;*/
+/*}*/
+
+/*@keyframes mymove {*/
+/*    from {*/
+/*        left: 0px;*/
+/*    }*/
+/*    to {*/
+/*        left: 300px;*/
+/*    }*/
+/*}*/
+
+.tran-duc-bo {
+    margin-top: 30%;
+    margin-left: 2rem;
+    position: relative;
+    top: 42px;
+    z-index: -2;
+    transition: all 1200ms linear;
 }
 
-.show-bo {
-    visibility: hidden;
-}
-
-@keyframes mymove {
-    from {
-        left: 0px;
-    }
-    to {
-        left: 300px;
-    }
+.move {
+    transform: translateY(-90%);
+    z-index: 2 !important;
 }

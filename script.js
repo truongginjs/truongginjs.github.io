@@ -1,32 +1,35 @@
 const audioMeo = new Audio('./resource/meomeomeo.wav');
 const audioOhno = new Audio('./resource/ohnoshort.wav');
 
-const tranDucBo = $('.tran-duc-bo');
 
-function pauseAudio(audio){
+function pauseAudio(audio) {
     audio.pause()
     audio.currentTime = 0;
 }
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-  }
+}
 
-$(".present").mouseenter(()=>{
+$(".present").mouseenter(() => {
     audioOhno.play()
 })
 
-$(".present").mouseout(function () { 
+$(".present").mouseout(function () {
     pauseAudio(audioOhno)
 });
 
-$(".present").click(async function (e) { 
-    tranDucBo.addClass('animation-bo')
-    
+$(".present").click(async function (e) {
+    // tranDucBo.addClass('animation-bo')
+
     pauseAudio(audioOhno)
     audioMeo.play()
-    
+
     let nap = $("#nap");
+    let tranDucBo = $('.tran-duc-bo');
     nap.addClass("present-rotate")
-    await sleep(audioMeo.duration*1000)
+    tranDucBo.addClass("move")
+    await sleep(audioMeo.duration * 1000)
+    tranDucBo.removeClass("move")
     nap.removeClass("present-rotate")
 });
