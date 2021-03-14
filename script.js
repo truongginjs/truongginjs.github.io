@@ -1,6 +1,12 @@
 const audioMeo = new Audio('./resource/meomeomeo.wav');
 const audioOhno = new Audio('./resource/ohnoshort.wav');
 
+function setHeightTamche() {
+    $('.tam-che').height($(window).height() - $('#hop').offset().top - 150)
+}
+
+$(window).on('load', setHeightTamche)
+$(window).resize(setHeightTamche)
 
 function pauseAudio(audio) {
     audio.pause()

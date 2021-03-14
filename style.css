@@ -1,3 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.tam-che {
+    position: absolute;
+    background-color: #fff;
+    width: 100vw;
+    /*height: 30vh;*/
+    bottom: 0;
+}
+
 .present #nap {
     width: 16em;
     height: 16em;
@@ -14,19 +30,13 @@
     position: absolute;
 }
 
-.present #den-thui{
+.present #den-thui {
     width: 16em;
     height: 16em;
     z-index: -2;
     position: absolute;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 .present .present-rotate {
     -webkit-transform: rotate(-90deg);
@@ -61,10 +71,10 @@
 /*}*/
 
 .tran-duc-bo {
-    margin-top: 30%;
+    /*margin-top: 30%;*/
     margin-left: 2rem;
     position: relative;
-    top: 100px;
+    top: 230px;
     z-index: -2;
     transition: all 1200ms linear;
 }
@@ -72,12 +82,4 @@
 .move {
     transform: translateY(-50%);
     /*z-index: 2 !important;*/
-}
-
-.tam-che{
-    position: fixed;
-    background-color: #fff;
-    width: 100vw;
-    height: 30vh;
-    bottom: 0;
 }
