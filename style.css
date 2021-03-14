@@ -61,10 +61,10 @@
 /*}*/
 
 .tran-duc-bo {
-    margin-top: 30%;
+/*     margin-top: 30%; */
     margin-left: 2rem;
     position: relative;
-    top: 100px;
+    top: 230px;
     z-index: -2;
     transition: all 1200ms linear;
 }
