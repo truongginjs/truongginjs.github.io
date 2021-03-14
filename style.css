@@ -1,7 +1,7 @@
 .present #nap {
     width: 16em;
     height: 16em;
-    margin-top: -15px;
+    /*margin-top: -15px;*/
     position: absolute;
     transition: transform 1s linear;
     transform-origin: left;
@@ -11,6 +11,13 @@
 .present #hop {
     width: 16em;
     /*height: 16em;*/
+    position: absolute;
+}
+
+.present #den-thui{
+    width: 16em;
+    height: 16em;
+    z-index: -2;
     position: absolute;
 }
 
@@ -57,12 +64,20 @@
     margin-top: 30%;
     margin-left: 2rem;
     position: relative;
-    top: 42px;
+    top: 100px;
     z-index: -2;
     transition: all 1200ms linear;
 }
 
 .move {
-    transform: translateY(-90%);
-    z-index: 2 !important;
+    transform: translateY(-50%);
+    /*z-index: 2 !important;*/
+}
+
+.tam-che{
+    position: fixed;
+    background-color: #fff;
+    width: 100vw;
+    height: 30vh;
+    bottom: 0;
 }
