@@ -76,10 +76,21 @@
     position: relative;
     top: 230px;
     z-index: -2;
-    transition: all 1200ms linear;
+    transition: transform 1200ms linear;
+    overflow: hidden;
+}
+
+.image {
+    width: 250px;
+    height: 100px;
+
 }
 
 .move {
     transform: translateY(-50%);
     /*z-index: 2 !important;*/
+}
+
+.height {
+    height: 320px !important;
 }

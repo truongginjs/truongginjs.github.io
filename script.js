@@ -33,9 +33,12 @@ $(".present").click(async function (e) {
 
     let nap = $("#nap");
     let tranDucBo = $('.tran-duc-bo');
+    let img = $('.image')
     nap.addClass("present-rotate")
     tranDucBo.addClass("move")
+    img.addClass('height')
     await sleep(audioMeo.duration * 1000)
     tranDucBo.removeClass("move")
     nap.removeClass("present-rotate")
+    img.removeClass('height')
 });
