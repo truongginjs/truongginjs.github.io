@@ -1,16 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container {
+    padding: 0 !important;
+    margin: 0 !important;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
-}
+    position: relative;
+    flex-direction: column;
 
-.tam-che {
-    position: absolute;
-    background-color: #fff;
-    width: 100vw;
-    bottom: 0;
+
 }
 
 .present {
@@ -40,8 +45,7 @@
     left: 0;
 }
 
-
-.present .present-rotate {
+.present-rotate {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
@@ -64,14 +68,40 @@
 /*    visibility: hidden;*/
 /*}*/
 
-/*@keyframes mymove {*/
-/*    from {*/
-/*        left: 0px;*/
-/*    }*/
-/*    to {*/
-/*        left: 300px;*/
-/*    }*/
-/*}*/
+.tam-che {
+    position: absolute;
+    background-color: #fff;
+    width: 300vw;
+    z-index: -1;
+    bottom: 0;
+}
+
+.background {
+    position: absolute;
+    background-color: #fff;
+    z-index: -3;
+    width: 300vw;
+    height: 100%;
+}
+
+.shake {
+    background: linear-gradient(to right, #ff0000, #ff8000, #ffff00, #00ff00, #00ffff, #0000ff, #8000ff, #ff00ff, #ff0000, #ff8000, #ffff00, #00ff00, #00ffff, #0000ff, #8000ff, #ff00ff, #ff0000, #ff8000, #ffff00, #00ff00, #00ffff, #0000ff, #8000ff, #ff00ff) !important;
+    animation: spin 1000ms infinite linear;
+    animation-play-state: paused;
+}
+
+.run {
+    animation-play-state: running !important;
+}
+
+@keyframes spin {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-35%);
+    }
+}
 
 .tran-duc-bo {
     margin-left: 2rem;
@@ -94,4 +124,39 @@
 
 .appear {
     display: block !important;
+}
+
+.clickhere {
+    position: absolute;
+    top: 15%;
+}
+
+.visible {
+    display: none;
+}
+
+.items {
+    position: absolute;
+    display: none;
+}
+
+.container > img:first-of-type {
+    bottom: 0;
+    left: 0;
+}
+
+.container > img:nth-of-type(2) {
+    left: 0;
+    top: 0;
+    transform: scaleX(-1);
+}
+
+.container > img:nth-of-type(3) {
+    right: 0;
+    top: 0;
+}
+.container > img:nth-of-type(4) {
+    bottom: 0;
+    right: 0;
+    transform: scaleX(-1);
 }

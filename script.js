@@ -17,15 +17,17 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-$(".present").mouseenter(() => {
+let present = $(".present")
+
+present.mouseenter(() => {
     audioOhno.play()
 })
 
-$(".present").mouseout(function () {
+present.mouseout(function () {
     pauseAudio(audioOhno)
 });
 
-$(".present").click(async function (e) {
+present.click(async function () {
     // tranDucBo.addClass('animation-bo')
 
     pauseAudio(audioOhno)
@@ -33,11 +35,25 @@ $(".present").click(async function (e) {
 
     let nap = $("#nap");
     let tranDucBo = $('.tran-duc-bo');
-    tranDucBo.addClass("appear")
+    let background = $('.background')
+    let tamche = $('.tam-che');
+    let clickhere = $('.clickhere')
+    let items = $('.items')
+
+    clickhere.addClass('visible')
+    background.addClass('shake run')
+    tamche.addClass('shake run')
+    items.addClass('appear')
+
+    tranDucBo.addClass("appear");
     await sleep(10)
     nap.addClass("present-rotate")
     tranDucBo.addClass("move")
+
     await sleep(audioMeo.duration * 1000)
+
+    background.removeClass('shake run')
+    tamche.removeClass('shake run')
     tranDucBo.removeClass("move")
     nap.removeClass("present-rotate")
 });
