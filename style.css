@@ -10,15 +10,19 @@
     position: absolute;
     background-color: #fff;
     width: 100vw;
-    /*height: 30vh;*/
     bottom: 0;
+}
+
+.present {
+    position: relative;
+    top: 10%;
 }
 
 .present #nap {
     width: 16em;
     height: 16em;
-    /*margin-top: -15px;*/
     position: absolute;
+    left: 0;
     transition: transform 1s linear;
     transform-origin: left;
     transform-style: preserve-3D;
@@ -26,8 +30,6 @@
 
 .present #hop {
     width: 16em;
-    /*height: 16em;*/
-    position: absolute;
 }
 
 .present #den-thui {
@@ -35,6 +37,7 @@
     height: 16em;
     z-index: -2;
     position: absolute;
+    left: 0;
 }
 
 
@@ -71,26 +74,24 @@
 /*}*/
 
 .tran-duc-bo {
-    /*margin-top: 30%;*/
     margin-left: 2rem;
-    position: relative;
-    top: 230px;
+    position: absolute;
+    top: 50%;
     z-index: -2;
-    transition: transform 1200ms linear;
+    transition: all 1200ms linear;
     overflow: hidden;
+    display: none;
 }
 
 .image {
-    width: 250px;
-    height: 100px;
+    height: 320px;
 
 }
 
 .move {
     transform: translateY(-50%);
-    /*z-index: 2 !important;*/
 }
 
-.height {
-    height: 320px !important;
+.appear {
+    display: block !important;
 }
