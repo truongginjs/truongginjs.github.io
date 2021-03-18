@@ -56,4 +56,5 @@ present.click(async function () {
     tamche.removeClass('shake run')
     tranDucBo.removeClass("move")
     nap.removeClass("present-rotate")
+    items.removeClass('appear')
 });
