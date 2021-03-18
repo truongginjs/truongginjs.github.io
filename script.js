@@ -20,7 +20,7 @@ function sleep(ms) {
 let present = $(".present")
 
 present.mouseenter(() => {
-    if (audioOhno.duration > 0 && !audioOhno.paused) {
+    if (audioMeo.duration > 0 && !audioMeo.paused) {
         audioOhno.play()
     }
 })
